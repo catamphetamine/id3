@@ -156,7 +156,7 @@ This library could be `import`ed in a web browser directly from a CDN URL. The A
 
 ```html
 <script type="module">
-import * as id3 from '//unpkg.com/@catamphetamine/id3js@^1/lib/browser.js';
+import * as id3 from '//unpkg.com/@catamphetamine/id3js@^1/lib/exports/browser.js';
 
 id3.fromUrl('/audio/track.mp3').then((tags) => {
   // tags now contains v1, v2 and merged tags
