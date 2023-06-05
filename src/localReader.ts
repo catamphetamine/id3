@@ -1,5 +1,5 @@
-import {Reader} from './reader.js';
 import * as fs from 'fs';
+import {Reader} from './reader/reader.js';
 
 /**
  * Provides read access to the local file system

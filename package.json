@@ -1,14 +1,30 @@
 {
-  "name": "id3js",
-  "version": "2.1.1",
-  "author": "43081j",
+  "name": "@catamphetamine/id3js",
+  "version": "1.0.0",
+  "author": {
+    "name": "James Garbutt",
+    "url" : "https://github.com/43081j"
+  },
+  "contributors": [{
+    "name": "Nikolay Kuchumov",
+    "url" : "https://github.com/catamphetamine"
+  }],
   "description": "A modern ID3 parser written completely in JavaScript, making use of typed arrays and the HTML5 File API",
-  "main": "./lib/id3.js",
-  "types": "./lib/id3.d.ts",
   "type": "module",
+  "exports": {
+    "./node": {
+      "types": "./lib/exports/node.d.ts",
+      "default": "./lib/exports/node.js"
+    },
+    "./browser": {
+      "types": "./lib/exports/browser.d.ts",
+      "default": "./lib/exports/browser.js"
+    },
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/43081j/id3.git"
+    "url": "https://github.com/catamphetamine/id3.git"
   },
   "keywords": [
     "id3",
@@ -16,7 +32,6 @@
     "parser"
   ],
   "files": [
-    "id3.js",
     "lib/**/*.js",
     "lib/**/*.d.ts"
   ],
@@ -35,9 +50,13 @@
     "clean": "rimraf ./lib",
     "prebuild": "npm run clean",
     "lint": "eslint \"src/**/*.ts\"",
-    "build": "npm run lint && tsc",
+    "lint-fix": "npm run lint -- --fix",
+    "build": "npm run lint-fix && tsc",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
     "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
   }
 }
