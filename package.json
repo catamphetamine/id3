@@ -1,14 +1,16 @@
 {
   "name": "@catamphetamine/id3js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "James Garbutt",
-    "url" : "https://github.com/43081j"
+    "url": "https://github.com/43081j"
   },
-  "contributors": [{
-    "name": "Nikolay Kuchumov",
-    "url" : "https://github.com/catamphetamine"
-  }],
+  "contributors": [
+    {
+      "name": "Nikolay Kuchumov",
+      "url": "https://github.com/catamphetamine"
+    }
+  ],
   "description": "A modern ID3 parser written completely in JavaScript, making use of typed arrays and the HTML5 File API",
   "type": "module",
   "exports": {
