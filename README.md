@@ -20,6 +20,8 @@ This is an enhanced [fork](https://github.com/catamphetamine/id3) of the origina
 * Added `getImageDataUrl()` exported function.
 * Added a demo page.
 
+<!-- Fork notice: https://github.com/43081j/id3/issues/60 -->
+
 ## Install
 
 ```
