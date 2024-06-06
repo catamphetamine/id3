@@ -4,12 +4,12 @@ import {Reader} from './reader/reader.js';
  * Reads a `File` instance
  */
 export class BrowserFileReader extends Reader {
-  protected _file: File;
+  protected _file: File | Blob;
 
   /**
    * @param {File} file File to read
    */
-  public constructor(file: File) {
+  public constructor(file: File | Blob) {
     super();
 
     this._file = file;
