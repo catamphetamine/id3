@@ -41,7 +41,7 @@ export function fromUrl(url: string): Promise<ID3Tag | null> {
  * @param {File} file File to parse
  * @return {Promise<ID3Tag>}
  */
-export function fromFile(file: File): Promise<ID3Tag | null> {
+export function fromFile(file: File | Blob): Promise<ID3Tag | null> {
   if (!SUPPORTS_FILE) {
     throw new Error(
       'Browser does not have support for the File API and/or ' + 'ArrayBuffers'
